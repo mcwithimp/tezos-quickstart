@@ -15,3 +15,4 @@ lz4 -d mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full.tar.lz4 
 rm mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full.tar.lz4
 tezos-node snapshot import mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full
 rm mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full
+export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y
