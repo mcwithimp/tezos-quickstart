@@ -9,7 +9,7 @@ sudo chmod 755 install.sh
 sudo ./install.sh mainnet
 tezos-node identity generate
 sudo apt update -y
-sudo apt install -y liblz4-tool jq
+sudo apt install -y liblz4-tool jq screen
 wget -c http://quicksync.tzdutch.com/mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full.tar.lz4
 lz4 -d mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full.tar.lz4 | tar xf -
 rm mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full.tar.lz4
