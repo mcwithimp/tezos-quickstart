@@ -1,6 +1,6 @@
-echo ============================================
-echo thanks for tezos-south-asia and tzdutch!
-echo ============================================
+echo ============================
+echo thanks for tezos-south-asia
+echo ============================
 
 sudo apt update -y
 sudo apt install -y wget
@@ -9,10 +9,9 @@ sudo chmod 755 install.sh
 sudo ./install.sh mainnet
 tezos-node identity generate
 sudo apt update -y
-sudo apt install -y liblz4-tool jq screen
-wget -c http://quicksync.tzdutch.com/mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full.tar.lz4
-lz4 -d mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full.tar.lz4 | tar xf -
-rm mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full.tar.lz4
-tezos-node snapshot import mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full
-rm mainnet-BMKkyoQRCUHh2nLxZE4o6q3ExQDeGntNsdMKTbzq6gEXRg6HguV.full
+sudo apt install -y gzip jq screen
+wget -c -O snapshot_mainnet_190709.full.gz https://gitlab.com/tezoskorea/snapshot-mainnet/raw/master/snapshot_mainnet_190709.full.gz
+gzip -d snapshot_mainnet_190709.full.gz
+tezos-node snapshot import snapshot_mainnet_190709.full
+rm snapshot_mainnet_190709.full
 export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y
