@@ -10,8 +10,4 @@ sudo ./install.sh mainnet
 tezos-node identity generate
 sudo apt update -y
 sudo apt install -y gzip jq screen
-wget -c -O snapshot_mainnet_190709.full.gz https://gitlab.com/tezoskorea/snapshot-mainnet/raw/master/snapshot_mainnet_190709.full.gz
-gzip -d snapshot_mainnet_190709.full.gz
-tezos-node snapshot import snapshot_mainnet_190709.full
-rm snapshot_mainnet_190709.full
 export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y
