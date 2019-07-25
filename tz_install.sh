@@ -31,8 +31,9 @@ sudo apt install -y libev-dev libgmp-dev pkg-config libhidapi-dev || exit 1
 make build-deps || exit 1
 eval $(opam env) || exit 1
 make || exit 1
+echo "export PATH=~/tezos:$PATH" >> ~/.bashrc
+echo "export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y" >> ~/.bashrc
 export PATH=~/tezos:$PATH
-source ./src/bin_client/bash-completion.sh
 export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y
 
 echo "Finished!"
