@@ -14,10 +14,10 @@ esac
 
 NET=$1
 
+# xcode-select --install || exit 1
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" || exit 1
 brew update || exit 1
 brew install git gmp libev pkg-config hidapi wget || exit 1
-# xcode-select --install || exit 1
 wget https://github.com/ocaml/opam/releases/download/2.0.3/opam-2.0.3-x86_64-darwin || exit 1
 sudo mv opam-2.0.3-x86_64-darwin /usr/local/bin/opam || exit 1
 sudo chmod a+x /usr/local/bin/opam
@@ -35,5 +35,6 @@ echo "export PATH=~/tezos:$PATH" >> .bash_profile
 echo "export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y" >> .bash_profile
 export PATH=~/tezos:$PATH
 export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y
+source ~/.bashrc
 
 echo "Finished!"

@@ -35,5 +35,6 @@ echo "export PATH=~/tezos:$PATH" >> ~/.bashrc
 echo "export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y" >> ~/.bashrc
 export PATH=~/tezos:$PATH
 export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y
+source ~/.bashrc
 
 echo "Finished!"
