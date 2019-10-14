@@ -31,8 +31,8 @@ export OPAMNO=false
 make build-deps || exit 1
 eval $(opam env) || exit 1
 make || exit 1
-echo "export PATH=~/tezos:$PATH" >> .bash_profile
-echo "export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y" >> .bash_profile
+echo "export PATH=~/tezos:$PATH" >> ~/.bash_profile
+echo "export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y" >> ~/.bash_profile
 export PATH=~/tezos:$PATH
 export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y
 source ~/.bashrc
