@@ -1,9 +1,9 @@
 usage() {
-  echo "Usage: $0 <alphanet|mainnet>"
+  echo "Usage: $0 <carthagenet|mainnet>"
 }
 
 case "$1" in
-  alphanet)
+  carthagenet)
     ;;
   mainnet)
     ;;
