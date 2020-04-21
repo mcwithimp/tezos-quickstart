@@ -26,6 +26,7 @@ cd tezos
 git checkout $NET || exit 1
 export OPAMNO=true
 opam init --bare  || exit 1
+eval $(opam env) || exit 1
 export OPAMNO=false
 sudo apt install -y libev-dev libgmp-dev pkg-config libhidapi-dev || exit 1
 make build-deps || exit 1
