@@ -27,6 +27,7 @@ cd tezos
 git checkout $NET || exit 1
 export OPAMNO=true
 opam init --bare  || exit 1
+eval $(opam env) || exit 1
 export OPAMNO=false
 make build-deps || exit 1
 eval $(opam env) || exit 1
