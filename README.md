@@ -6,7 +6,7 @@
 ```
 curl "https://gitlab.com/tezoskorea/quickstart/raw/master/tz_install.sh" | bash -s mainnet
 ```
-- 2) Alphanet
+- 2) Carthagenet
 ```
-curl "https://gitlab.com/tezoskorea/quickstart/raw/master/tz_install.sh" | bash -s alphanet
+curl "https://gitlab.com/tezoskorea/quickstart/raw/master/tz_install.sh" | bash -s carthagenet
 ```
