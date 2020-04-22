@@ -10,4 +10,5 @@ sudo ./install.sh carthagenet
 tezos-node identity generate
 sudo apt update -y
 sudo apt install -y gzip jq screen
+echo "export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y" >> ~/.bashrc
 export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y
