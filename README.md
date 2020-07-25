@@ -5,5 +5,5 @@
 1. Get `latest-release` branch  
 From 7.x, tezos supports multinetwork node.
 ```
-curl "https://raw.githubusercontent.com/mcwithimp/quickstart/master/tz_install.sh" | bash
+curl "https://raw.githubusercontent.com/mcwithimp/tezos-quickstart/master/tz_install.sh" | bash
 ```
