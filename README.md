@@ -2,11 +2,8 @@
 - Environment: Ubuntu 16.04 LTS, 18.04 LTS (aws, google cloud)
 
 ## How to Use
-- 1) Mainnet
+1. Get `latest-release` branch  
+From 7.x, tezos supports multinetwork node.
 ```
-curl "https://gitlab.com/tezoskorea/quickstart/raw/master/tz_install.sh" | bash -s mainnet
-```
-- 2) Carthagenet
-```
-curl "https://gitlab.com/tezoskorea/quickstart/raw/master/tz_install.sh" | bash -s carthagenet
+curl "https://raw.githubusercontent.com/mcwithimp/quickstart/master/tz_install.sh" | bash
 ```

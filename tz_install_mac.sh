@@ -1,19 +1,3 @@
-usage() {
-  echo "Usage: $0 <carthagenet|mainnet>"
-}
-
-case "$1" in
-  carthagenet)
-    ;;
-  mainnet)
-    ;;
-  *) usage
-    exit 1
-    ;;
-esac
-
-NET=$1
-
 # xcode-select --install || exit 1
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" || exit 1
 brew update || exit 1
@@ -24,7 +8,7 @@ sudo chmod a+x /usr/local/bin/opam
 echo "f25a98ff5a45bd2ad7ce1b9496503c505ca8cd38525dcd11be04b9203e54cbff  /usr/local/bin/opam" | shasum -a 256 -c  
 git clone https://gitlab.com/tezos/tezos.git || exit 1
 cd tezos
-git checkout $NET || exit 1
+git checkout latest-release || exit 1
 export OPAMNO=true
 opam init --bare  || exit 1
 eval $(opam env) || exit 1
