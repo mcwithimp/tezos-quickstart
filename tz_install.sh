@@ -1,10 +1,12 @@
+sudo add-apt-repository ppa:avsm/ppa || exit 1
 sudo apt update || exit 1
-sudo apt install -y rsync git make m4 build-essential patch unzip wget || exit 1
-wget http://security.ubuntu.com/ubuntu/pool/main/b/bubblewrap/bubblewrap_0.2.1-1ubuntu0.1_amd64.deb || exit 1
-sudo dpkg -i bubblewrap_0.2.1-1ubuntu0.1_amd64.deb || exit 1
-wget https://github.com/ocaml/opam/releases/download/2.0.3/opam-2.0.3-x86_64-linux  || exit 1
-sudo cp opam-2.0.3-x86_64-linux /usr/local/bin/opam || exit 1
-sudo chmod a+x /usr/local/bin/opam
+# sudo apt install -y rsync git make m4 build-essential patch unzip wget || exit 1
+# wget http://security.ubuntu.com/ubuntu/pool/main/b/bubblewrap/bubblewrap_0.2.1-1ubuntu0.1_amd64.deb || exit 1
+# sudo dpkg -i bubblewrap_0.2.1-1ubuntu0.1_amd64.deb || exit 1
+# wget https://github.com/ocaml/opam/releases/download/2.0.3/opam-2.0.3-x86_64-linux  || exit 1
+# sudo cp opam-2.0.3-x86_64-linux /usr/local/bin/opam || exit 1
+# sudo chmod a+x /usr/local/bin/opam
+sudo apt install -y rsync git m4 build-essential patch unzip wget pkg-config libgmp-dev libev-dev libhidapi-dev libffi-dev opam jq || exit 1
 git clone https://gitlab.com/tezos/tezos.git || exit 1
 cd tezos
 git checkout latest-release || exit 1
